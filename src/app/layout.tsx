@@ -49,7 +49,7 @@ export default function RootLayout({
           {/* Simple dark background with brand gradient overlay */}
           <div className="fixed inset-0 -z-50 bg-black">
             {/* Brand gradient overlay (subtle) */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#14284F]/20 via-[#2C3BEE]/10 to-[#7979E0]/15"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-[#14284F]/20 via-[#2C3BEE]/10 to-[#7979E0]/15"></div>
             
             {/* Minimal glow elements */}
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#2C3BEE]/5 rounded-full blur-3xl"></div>

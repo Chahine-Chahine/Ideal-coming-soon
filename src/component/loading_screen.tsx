@@ -202,48 +202,19 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
             />
           </div>
 
-          {/* Logo Container - FLEXIBLE HEIGHT */}
-          <div className="relative w-full h-full flex flex-col items-center justify-between py-6 md:py-12 lg:justify-center px-4">
+          {/* CENTERED CONTENT CONTAINER */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
             
-            {/* Spacer for top */}
-            <div className="flex-1 md:hidden" />
-            
-            {/* Neon Outer Glow - EXACT BRAND GRADIENT WITH ENTRANCE ANIMATION */}
+            {/* MAIN LOGO CONTAINER - GLASS BORDER REMOVED */}
             <div 
-              className="absolute rounded-full blur-3xl"
+              className="relative p-6 md:p-8 lg:p-14 mx-4 mb-6 md:mb-8 lg:mb-12"
               style={{
-                width: 'min(500px, 90vw)',
-                height: 'min(500px, 90vw)',
-                background: `linear-gradient(135deg, ${colors.primaryBlue2}80, ${colors.secondaryPurple}80)`,
-                animation: logoVisible 
-                  ? 'pulseSlow 3s ease-in-out infinite, outerGlowExpand 1.2s ease-out forwards'
-                  : 'none',
-                opacity: logoVisible ? 1 : 0,
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
-            
-            {/* Glass Morphism Effect - EXACT BRAND STYLING WITH ENTRANCE ANIMATION */}
-            <div 
-              className="relative rounded-3xl border-2 p-6 md:p-8 lg:p-14 shadow-2xl mx-4 mb-6 md:mb-8 lg:mb-12"
-              style={{
-                background: 'rgba(255, 255, 255, 0.40)',
-                borderColor: 'rgba(255, 255, 255, 0.40)',
-                boxShadow: `0 25px 50px -12px ${colors.primaryBlue2}80`,
                 maxWidth: '90vw',
                 width: 'fit-content',
-                animation: logoVisible 
-                  ? 'glassAppear 1s ease-out forwards, borderGlowEntrance 1.5s ease-out forwards'
-                  : 'none',
                 opacity: logoVisible ? 1 : 0,
-                backdropFilter: logoVisible ? 'blur(24px)' : 'blur(0px)',
-                transition: 'opacity 0.5s ease, backdrop-filter 0.5s ease',
+                transition: 'opacity 0.5s ease',
               }}
             >
-              
-              {/* Logo with Integrated Checkmark - WITH ENTRANCE ANIMATION */}
               <div className="relative">
                 <div 
                   className="relative flex items-center justify-center"
@@ -257,7 +228,6 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
                     transition: 'opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease',
                   }}
                 >
-                  {/* Logo Image */}
                   <img 
                     src="/Ideal-Logo.png"
                     alt="IDEAL Logo"
@@ -386,9 +356,6 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
                 INITIALIZING EXPERIENCE
               </p>
             </div>
-
-            {/* Spacer for bottom */}
-            <div className="flex-1 md:hidden" />
           </div>
 
           {/* Background Glow Elements - EXACT Brand Colors WITH STAGGERED ENTRANCE */}
