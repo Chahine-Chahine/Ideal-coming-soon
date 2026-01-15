@@ -144,9 +144,9 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
 
   // Social media links - REPLACE WITH ACTUAL IDEAL MENA LINKS
   const socialLinks = {
-    linkedin: "https://www.linkedin.com/company/ideal-mena", // Update with actual link
-    instagram: "https://www.instagram.com/idealmena", // Update with actual link
-    whatsapp: "https://wa.me/1234567890", // Update with actual WhatsApp number
+    linkedin: "https://www.linkedin.com/company/idealmena/", // Update with actual link
+    instagram: "https://www.instagram.com/idealmena/", // Update with actual link
+    whatsapp: "https://wa.me/96170367037", // Update with actual WhatsApp number
   };
 
   useEffect(() => {
@@ -471,6 +471,7 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
                     : 'none',
                 }}
                 aria-label="https://wa.me/96170367037"
+                
               >
                 <div className="relative p-2 md:p-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 group-hover:border-green-400/50 transition-all duration-300">
                   <svg 
