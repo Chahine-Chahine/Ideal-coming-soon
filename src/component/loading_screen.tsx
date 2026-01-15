@@ -462,40 +462,44 @@ const LoadingScreen = ({ isLoading, duration = 3000 }: LoadingScreenProps) => {
               </button>
 
               {/* WhatsApp Icon */}
-              <button
-                onClick={() => handleSocialClick('whatsapp')}
-                className="relative group cursor-pointer transform transition-all duration-300 hover:scale-110"
-                style={{
-                  animation: logoVisible 
-                    ? 'iconFloat 3s ease-in-out infinite 2.4s' 
-                    : 'none',
-                }}
-                aria-label="https://wa.me/96170367037"
-                
-              >
-                <div className="relative p-2 md:p-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 group-hover:border-green-400/50 transition-all duration-300">
-                  <svg 
-                    className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path 
-                      d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91m3.81 13.43c-.33.93-.75 1.78-1.35 2.48-.15.18-.33.33-.51.48-.18.15-.36.27-.57.37-.21.09-.42.15-.63.18-.21.03-.39.03-.57.03-.18 0-.36 0-.54-.03-.18-.03-.36-.09-.54-.15-.18-.06-.36-.12-.54-.21l-1.38-.72c-.18-.09-.36-.18-.54-.27-.18-.09-.36-.18-.54-.24-.18-.06-.33-.09-.48-.09-.15 0-.3.03-.45.06l-1.65.45c-.15.03-.3.06-.45.06-.15 0-.3 0-.45-.03-.15-.03-.3-.09-.45-.18-.15-.09-.3-.21-.45-.33-.15-.12-.27-.27-.39-.42-.12-.15-.21-.33-.27-.51-.06-.18-.09-.36-.09-.54 0-.18.03-.36.06-.54l.45-1.65c.03-.15.06-.3.09-.45.03-.15.09-.3.15-.45.06-.15.15-.3.24-.45.09-.15.21-.3.33-.45.12-.15.27-.3.42-.45.15-.15.33-.27.51-.39.18-.12.39-.21.6-.27.21-.06.45-.09.69-.09.24 0 .48.03.72.09.24.06.48.15.72.27.24.12.48.27.72.45.24.18.48.39.72.63.24.24.45.51.63.81.18.3.33.63.45.99.12.36.18.75.18 1.17 0 .42-.06.84-.18 1.26-.12.42-.27.81-.45 1.17z"
-                      fill="white"
-                      className="group-hover:fill-[#25D366] transition-colors duration-300"
-                    />
-                  </svg>
-                  {/* Glow effect on hover */}
-                  <div className="absolute inset-0 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      background: 'radial-gradient(circle, rgba(37,211,102,0.3) 0%, transparent 70%)',
-                    }}
-                  />
-                </div>
-                <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  WhatsApp
-                </span>
-              </button>
+              {/* WhatsApp Icon - Original Transparent */}
+{/* WhatsApp Icon - Official Branding */}
+<button
+  onClick={() => handleSocialClick('whatsapp')}
+  className="relative group cursor-pointer transform transition-all duration-300 hover:scale-110"
+  style={{
+    animation: logoVisible 
+      ? 'iconFloat 3s ease-in-out infinite 2.4s' 
+      : 'none',
+  }}
+  aria-label="whatsapp"
+>
+  <div className="relative p-2 md:p-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 group-hover:border-green-400/50 transition-all duration-300">
+    <svg 
+      className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
+      viewBox="0 0 24 24"
+      fill="currentColor" // Using currentColor to control it via text classes or stroke
+    >
+      <path 
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12.03 2c-5.52 0-10 4.48-10 10 0 1.77.47 3.43 1.29 4.87L2 22l5.31-1.39c1.4.79 3.01 1.24 4.72 1.24 5.52 0 10-4.48 10-10S17.55 2 12.03 2zM12 20.33c-1.58 0-3.06-.44-4.33-1.2l-.31-.18-3.21.84.86-3.13-.2-.32c-.83-1.31-1.31-2.87-1.31-4.54 0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.2-8.2 8.2zm4.51-6.19c-.25-.13-1.47-.72-1.7-.8-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.96-.14.16-.28.18-.53.05-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.41.08-.16.04-.31-.02-.44-.06-.13-.55-1.33-.75-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.41.06-.63.29-.22.23-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.16-.48-.29z"
+        fill="white"
+        className="group-hover:fill-[#25D366] transition-colors duration-300"
+      />
+    </svg>
+    
+    {/* Glow effect on hover */}
+    <div className="absolute inset-0 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      style={{
+        background: 'radial-gradient(circle, rgba(37,211,102,0.3) 0%, transparent 70%)',
+      }}
+    />
+  </div>
+  <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+    WhatsApp
+  </span>
+</button>
             </div>
 
             {/* Social media connect text - ADDED EXTRA MARGIN ABOVE */}
